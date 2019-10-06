@@ -1,0 +1,9 @@
+.vscode/
+/venv/
+__pycache__/
+migrations/
+
+settings.py
+
+media/avatar/
+!media/avatar/default.jpeg

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>MyBBS</title>
+
+    <link rel="stylesheet" href="/static/bbs/css/index.css">
+</head>
+
+<body>
+    {% if request.session.name %}
+        <a href="/user/">{{ request.session.name }}</a>
+        <a href="/user/logout/">退出</a>
+        <div>
+            <img class="avatar" src="/media/{{ request.session.avatar }}" alt="">
+        </div>
+    {% else %}
+        <a href="/user/login/">登录</a>
+        <a href="/user/register/">注册</a>
+    {% endif %}
+    
+    
+    <div>
+        当前位置：<a href="/">首页</a>/
+    </div>
+    <a href="/teahouse/"><h3>茶馆</h3></a>
+    
+    
+
+</body>
+</html>

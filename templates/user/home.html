@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心</title>
+
+    <link rel="stylesheet" href="/static/user/css/home.css">
+</head>
+
+<body>
+    <a href="/">首页</a>
+    <a href="/user/edit/">编辑</a>
+    <div>
+        <img class="avatar" src="/media/{{ request.session.avatar }}" alt="">
+    </div>
+    <div>
+        用户名{{ request.session.name }}
+    </div>
+    <div>
+        邮箱{{ request.session.email }}
+    </div>
+    <div>
+        注册时间{{ request.session.jointime }}
+    </div>
+    <div>
+        积分{{ request.session.sp }}
+    </div>
+    <div>
+        等级{{ request.session.level }}
+    </div>
+    
+
+</body>
+</html>
